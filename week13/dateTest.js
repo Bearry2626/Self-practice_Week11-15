@@ -64,4 +64,15 @@ else console.log("opentime is not the same")
 if (openTime.getTime() === aTime.getTime())
   //getTime - return millisecond of date object
   console.log("both openTime and aTime are the same ") //both openTime and aTime are the same
+
+
+//check valid time period with same timezone
+//same timezone
+const openTime1 = new Date("2025-11-19T12:00:00")
+const closeTime1 = new Date("2025-11-20T12:00:00")
  
+const myBookingTime1 = new Date("2025-11-19T11:59:59")
+ 
+if (myBookingTime1 >= openTime1 && myBookingTime1 <= closeTime1) {
+  console.log("valid booking time")
+} else console.log("invalid booking time")
